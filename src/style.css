@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face{
+    font-family:'myFont';
+    src:url(./SpicyRice-Regular.ttf) format(truetype);
+}
+body{
+    background:url('./myIcon2.jpg');
+    position:relative;
+    font-family:'myFont';
+}
+header{
+    display:flex;
+    justify-content: center;
+    padding-top:1rem;
+}
+header>nav>button{
+    margin-left:2rem;
+    background: none;
+    border:none;
+    font-family:'myFont';
+    font-size:2rem;
+    color:brown;
+}
+#content{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:4.8rem;
+    opacity:0.7;
+    border-radius:10px;
+    padding:1.2rem 3rem;
+}
+.welcome,.hours,.location{
+    width:600px;
+    margin-bottom:2.5rem
+}
+.welcome>h2,.hours>h2,.location>h2,.about>h2{
+    font-size:2.5rem;
+    text-align:center;
+    margin-bottom:1.2rem;
+}
+.welcome>p,.hours>p,.location>p{
+    font-size:1.5rem;
+}
+.about>p{
+    font-size:1.3rem;
+} 
+.about>div{
+    display:flex;
+    justify-content: center;
+    margin-top:2.5rem;
+}
+.about>div>button{
+    border-radius:5px;
+    border:none;
+    background:rgb(171, 54, 54);
+    font-size:1.3rem;
+    padding:0.5rem 1rem;
+}
+.about>div>button a{
+    text-decoration:none;
+    font-family:'myFont';
+    color:black;
+}
+.about>div>button:hover{
+    background:orange;
+}
+#content>.menu-container{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:1.5rem;
+    row-gap: 2.5rem;
+}
+#content>div>div{
+    display:flex;
+}
+#content>div>div img{
+    width:150px;
+    height:150px;
+    display:inline;
+    margin-right:0.5rem;
+    border-radius:10px;
+}
+#content>div>div>div>p+p+s+p,#content>div>div>div>p+p{
+    display:inline;
+}
+#content>div>div>div>p+p+s{
+    margin-right:0.7rem;
+}
+#content>div>div>div button{
+    display:block;
+    border:none;
+    background:brown;
+    border-radius: 10px;
+    font-size:1rem;
+    font-family:'myFont';
+    padding:0.5rem 0.8rem;
+    margin:0.5rem 0 0 5rem;
+}
+#content>div>div>div button:hover{
+    background:orange;
+}
+.footer{
+    background: brown;
+    position:fixed;
+    left:0;
+    bottom:0;
+    text-align:center;
+    font-size:0.7rem;
+    width:100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:0.5rem 0;
+    margin-top:0.8rem;
+}
+@media(max-width:600px){
+    header>nav>button{
+        font-size:1.2rem
+    }
+    .welcome,.hours,.location{
+        width:350px;
+        margin-bottom:1.5rem;
+    }
+    .welcome>h2,.hours>h2,.location>h2,.about>h2{
+        font-size:1.7rem;
+        margin-bottom:0.8rem;
+    }
+    .welcome>p,.hours>p,.location>p{
+        font-size:1.3rem;
+        padding:0 0.5rem;
+        text-align: justify;
+    }
+    .about>p{
+        font-size:1rem;
+        text-align: justify;
+    } 
+    #content>.menu-container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:1.5rem;
+    }
+    #content>div>div{
+        width:300px;
+    }
+    #content>div>div>div p:first-child{
+        text-align:justify;
+    }
+    #content>div>div img{
+        width: 135px;
+        height:120px;
+        margin-right:0.5rem;
+    }
+    #content>div>div>div button{
+        margin-left: 2.5rem;
+    }
+}
